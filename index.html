@@ -1840,12 +1840,13 @@
         modalImage.addEventListener('touchmove', function(e) {
             const moveX = e.changedTouches[0].screenX - touchStartX;
             const moveY = e.changedTouches[0].screenY - touchStartY;
+            // Solo bloquear si es swipe horizontal claro (más de 30px y más horizontal que vertical)
             if (!isHorizontalSwipe && !isVerticalSwipe) {
-                if (Math.abs(moveX) > Math.abs(moveY) && Math.abs(moveX) > 10) {
+                if (Math.abs(moveX) > Math.abs(moveY) && Math.abs(moveX) > 30) {
                     isHorizontalSwipe = true;
                     isVerticalSwipe = false;
-                    e.preventDefault(); // Solo prevenir scroll si es swipe horizontal
-                } else if (Math.abs(moveY) > Math.abs(moveX) && Math.abs(moveY) > 10) {
+                    e.preventDefault(); // Solo prevenir scroll si es swipe horizontal claro
+                } else if (Math.abs(moveY) > Math.abs(moveX) && Math.abs(moveY) > 30) {
                     isVerticalSwipe = true;
                     isHorizontalSwipe = false;
                     // No prevenir scroll, dejar que el navegador maneje el scroll
@@ -1853,6 +1854,7 @@
             } else if (isHorizontalSwipe) {
                 e.preventDefault();
             }
+            // Si es vertical, nunca prevenimos el scroll
         }, { passive: false });
 
         // Detectar fin del toque
