@@ -1763,9 +1763,11 @@
             });
         });
         
-        // Funcionalidad para el carrusel de fotos
+        // Funcionalidad para el carrusel de fotos mejorada para móviles
         let currentPhotos = [];
         let currentPhotoIndex = 0;
+        let touchStartX = 0;
+        let touchEndX = 0;
         
         // Función para abrir el modal
         function openPhotoModal(photos, startIndex) {
@@ -1819,6 +1821,36 @@
             }
         });
         
+        // Soporte para gestos táctiles (swipe) en móviles
+        const modalImage = document.getElementById('modalImage');
+        
+        // Detectar inicio del toque
+        modalImage.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        
+        // Detectar fin del toque
+        modalImage.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+        
+        // Manejar el gesto de swipe
+        function handleSwipe() {
+            const swipeThreshold = 50; // Sensibilidad del swipe
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swipe hacia la izquierda - siguiente foto
+                    nextPhoto();
+                } else {
+                    // Swipe hacia la derecha - foto anterior
+                    prevPhoto();
+                }
+            }
+        }
+        
         // Navegación con teclado
         document.addEventListener('keydown', function(e) {
             if (document.getElementById('photoModal').style.display === 'block') {
@@ -1836,9 +1868,20 @@
         function makePhotosClickable() {
             const galleryImages = document.querySelectorAll('.gallery-grid img');
             galleryImages.forEach((img, index) => {
-                img.addEventListener('click', function() {
+                // Remover event listeners anteriores para evitar duplicados
+                img.removeEventListener('click', img.clickHandler);
+                
+                // Crear nuevo event listener
+                img.clickHandler = function() {
                     openPhotoModal(Array.from(galleryImages), index);
-                });
+                };
+                
+                img.addEventListener('click', img.clickHandler);
+                
+                // Agregar soporte táctil para las imágenes de la galería
+                img.addEventListener('touchstart', function(e) {
+                    e.preventDefault(); // Prevenir zoom en móviles
+                }, { passive: false });
             });
         }
         
@@ -1909,4 +1952,3 @@
     </script>
 </body>
 </html>
-
