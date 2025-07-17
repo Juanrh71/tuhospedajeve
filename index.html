@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tuhospedajeve</title>
     <link rel='icon' type='image/jpeg' href='fotos/logo.jpg'>
-    <meta name="description" content="Alquiler de propiedades en Tucacas con Juan Rodriguez. 5 años de experiencia en el mercado turístico de Tucacas, Venezuela.">
-    <meta name="keywords" content="alquiler, tucacas, venezuela, juan rodriguez, propiedades, turismo, playa">
+    <meta name="description" content="Alquiler de propiedades en Venezuela. 2 años de experiencia en el mercado.">
+    <meta name="keywords" content="alquiler,venezuela,propiedades, turismo, playa,ciudad">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/special-gothic-expanded-one" rel="stylesheet">
@@ -1823,16 +1823,46 @@
         
         // Soporte para gestos táctiles (swipe) en móviles
         const modalImage = document.getElementById('modalImage');
-        
+        let touchStartY = 0;
+        let touchEndY = 0;
+        let isHorizontalSwipe = false;
+        let isVerticalSwipe = false;
+
         // Detectar inicio del toque
         modalImage.addEventListener('touchstart', function(e) {
             touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+            isHorizontalSwipe = false;
+            isVerticalSwipe = false;
         }, { passive: true });
-        
+
+        // Detectar movimiento del toque
+        modalImage.addEventListener('touchmove', function(e) {
+            const moveX = e.changedTouches[0].screenX - touchStartX;
+            const moveY = e.changedTouches[0].screenY - touchStartY;
+            if (!isHorizontalSwipe && !isVerticalSwipe) {
+                if (Math.abs(moveX) > Math.abs(moveY) && Math.abs(moveX) > 10) {
+                    isHorizontalSwipe = true;
+                    isVerticalSwipe = false;
+                    e.preventDefault(); // Solo prevenir scroll si es swipe horizontal
+                } else if (Math.abs(moveY) > Math.abs(moveX) && Math.abs(moveY) > 10) {
+                    isVerticalSwipe = true;
+                    isHorizontalSwipe = false;
+                    // No prevenir scroll, dejar que el navegador maneje el scroll
+                }
+            } else if (isHorizontalSwipe) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+
         // Detectar fin del toque
         modalImage.addEventListener('touchend', function(e) {
             touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
+            touchEndY = e.changedTouches[0].screenY;
+            if (isHorizontalSwipe) {
+                handleSwipe();
+            }
+            // Si fue vertical, no hacemos nada (dejamos scrollear)
         }, { passive: true });
         
         // Manejar el gesto de swipe
@@ -1952,3 +1982,4 @@
     </script>
 </body>
 </html>
+
