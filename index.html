@@ -1931,56 +1931,7 @@
             subtree: true
         });
     });
-    
-    function scrollToForm() {
-        // Abrir modal del formulario de contacto
-        document.getElementById('contactModal').style.display = 'block';
-        document.body.style.overflow = 'hidden';
-    }
-    
-    function toggleForm() {
-        const form = document.getElementById('contactForm');
-        if (form.style.display === 'none' || form.style.display === '') {
-            form.style.display = 'block';
-        } else {
-            form.style.display = 'none';
-        }
-    }
-    
-    function submitForm(event) {
-        event.preventDefault();
-        
-        const formData = new FormData(event.target);
-        const data = Object.fromEntries(formData);
-        
-        // Crear mensaje para Telegram
-        const message = `🏠 *Nueva Consulta de Disponibilidad*
-
-👤 *Nombre:* ${data.name}
-📱 *Teléfono:* ${data.phone}
-📧 *Email:* ${data.email}
-📅 *Check-in:* ${data.checkin}
-📅 *Check-out:* ${data.checkout}
-👥 *Huéspedes:* ${data.guests} personas
-📍 *Ubicación preferida:* ${data.location}
-💬 *Mensaje:* ${data.message || 'Sin mensaje adicional'}`;
-        
-        // Codificar el mensaje para la URL de Telegram
-        const encodedMessage = encodeURIComponent(message);
-        const telegramUrl = `https://t.me/juanjrodriguezh?text=${encodedMessage}`;
-        
-        // Abrir Telegram con el mensaje prellenado
-        window.open(telegramUrl, '_blank');
-        
-        // Limpiar el formulario
-        event.target.reset();
-        
-        // Ocultar el formulario
-        document.getElementById('contactForm').style.display = 'none';
-        
-        // Mostrar mensaje de confirmación
-        alert('¡Consulta enviada! Se abrirá Telegram con tu mensaje.');
-    }
     </script>
 </body>
 </html>
+
