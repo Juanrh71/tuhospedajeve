@@ -21,7 +21,6 @@
             --color-bg-light: #f8fafc;
         }
         
-        /* Escala tipográfica responsiva y mejor espaciado para Special Gothic Expanded One */
         h1, .h1 {
             font-family: var(--font-display);
             font-size: clamp(2.1rem, 6vw, 3.2rem);
@@ -83,7 +82,7 @@
             line-height: 1.4;
         }
         
-        /* Button Typography */
+       
         .cta-button, .selection-btn, .whatsapp-btn, .platform-btn {
             font-family: var(--font-primary);
             font-weight: 600;
@@ -91,7 +90,7 @@
             letter-spacing: 0.01em;
         }
         
-        /* Logo Typography */
+      
         .logo {
             font-family: var(--font-display);
             font-size: clamp(1.2rem, 4vw, 1.7rem);
@@ -1642,7 +1641,7 @@
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fas fa-map-marker-al t"></i>
+                            <i class="fas fa-map-marker-alt" style="color: #fff; margin-right: 0.5rem;"></i>
                         </div>
                         <div class="contact-text">
                             <strong>Ubicación:</strong><br>
@@ -1661,7 +1660,7 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
                 <div class="policy-card" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
                     <h3 style="font-size: 1.3rem; font-weight: 600; color: #2c3e50; margin-bottom: 1rem;">
-                        <i class="fas fa-calendar-alt" style="color: #667eea; margin-right: 0.5rem;"></i>
+                        <i class="fas fa-calendar-alt" style="color: #6B7C3B; margin-right: 0.5rem;"></i>
                         Política de Cancelación
                     </h3>
                     <ul style="color: #666; line-height: 1.8;">
@@ -1673,7 +1672,7 @@
                 </div>
                 <div class="policy-card" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
                     <h3 style="font-size: 1.3rem; font-weight: 600; color: #2c3e50; margin-bottom: 1rem;">
-                        <i class="fas fa-users" style="color: #667eea; margin-right: 0.5rem;"></i>
+                        <i class="fas fa-users" style="color: #6B7C3B; margin-right: 0.5rem;"></i>
                         Política de Huéspedes
                     </h3>
                     <ul style="color: #666; line-height: 1.8;">
@@ -1684,7 +1683,7 @@
                 </div>
                 <div class="policy-card" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
                     <h3 style="font-size: 1.3rem; font-weight: 600; color: #2c3e50; margin-bottom: 1rem;">
-                        <i class="fas fa-shield-alt" style="color: #667eea; margin-right: 0.5rem;"></i>
+                        <i class="fas fa-shield-alt" style="color: #6B7C3B; margin-right: 0.5rem;"></i>
                         Seguridad y Limpieza
                     </h3>
                     <ul style="color: #666; line-height: 1.8;">
@@ -1725,6 +1724,10 @@
         } else {
             contentDiv.innerHTML = aboutContent + ciudadContent;
         }
+        // Hacer scroll suave al contenido dinámico
+        setTimeout(() => {
+            contentDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
     }
     
     // No mostrar nada por defecto
@@ -1934,4 +1937,5 @@
     </script>
 </body>
 </html>
+
 
