@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tuhospedajeve</title>
+    <link rel='icon' type='image/jpeg' href='fotos/logo.jpg'>
+    <meta name="description" content="Alquiler de propiedades en Venezuela. 2 años de experiencia en el mercado.">
+    <meta name="keywords" content="alquiler,venezuela,propiedades, turismo, playa,ciudad">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/special-gothic-expanded-one" rel="stylesheet">
+    <style>
+        :root {
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-display: 'Special Gothic Expanded One', 'Arial Black', 'Helvetica Black', sans-serif;
+            --color-primary: #aebc99;
+            --color-text: #2c3e50;
+            --color-text-light: #666;
+            --color-white: #ffffff;
+            --color-bg-light: #f8fafc;
+        }
+        
+        h1, .h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.1rem, 6vw, 3.2rem);
+            font-weight: normal;
+            line-height: 1.08;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 0.7em;
+        }
+        
+        h2, .h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 4.5vw, 2.2rem);
+            font-weight: normal;
+            line-height: 1.13;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            margin-bottom: 0.6em;
+        }
+        
+        h3, .h3 {
+            font-family: var(--font-display);
+            font-size: clamp(1.15rem, 3.5vw, 1.5rem);
+            font-weight: normal;
+            line-height: 1.18;
+            letter-spacing: 0.025em;
+            text-transform: uppercase;
+            margin-bottom: 0.5em;
+        }
+        
+        h4, .h4 {
+            font-family: var(--font-display);
+            font-size: clamp(1rem, 2.5vw, 1.15rem);
+            font-weight: normal;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            margin-bottom: 0.4em;
+        }
+        
+        p {
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            line-height: 1.7;
+            color: var(--color-text-light);
+        }
+        
+        .text-large {
+            font-size: clamp(1.125rem, 2.5vw, 1.25rem);
+            line-height: 1.6;
+        }
+        
+        .text-small {
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5;
+        }
+        
+        .text-xs {
+            font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+            line-height: 1.4;
+        }
+        
+       
+        .cta-button, .selection-btn, .whatsapp-btn, .platform-btn {
+            font-family: var(--font-primary);
+            font-weight: 600;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            letter-spacing: 0.01em;
+        }
+        
+      
+        .logo {
+            font-family: var(--font-display);
+            font-size: clamp(1.2rem, 4vw, 1.7rem);
+            font-weight: normal;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        
+        /* Navigation Typography */
+        .nav-menu a {
+            font-weight: 500;
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            letter-spacing: 0.01em;
+        }
+        
+        /* Hero Section Typography */
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: normal;
+            line-height: 1.1;
+            letter-spacing: 0.05em;
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        
+        .hero p {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            line-height: 1.6;
+            color: #f5f5dc;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(0.9rem, 2.2vw, 1.1rem) !important;
+            line-height: 1.5 !important;
+            color: #f5f5dc !important;
+            margin-bottom: 1.2rem !important;
+            font-weight: 400 !important;
+        }
+        
+        .hero-benefits {
+            font-size: clamp(0.8rem, 2vw, 1rem) !important;
+            line-height: 1.4 !important;
+            color: #f0f0f0 !important;
+            margin-bottom: 1rem !important;
+            font-weight: 400 !important;
+            opacity: 0.9;
+        }
+        
+        .hero strong {
+            font-weight: 700;
+            color: var(--color-white);
+        }
+        
+        /* Section Titles */
+        .section-title, .selection-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.3rem, 4vw, 2rem);
+            font-weight: normal;
+            line-height: 1.13;
+            letter-spacing: 0.03em;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            margin-bottom: 0.7em;
+        }
+        
+        /* Property Cards Typography */
+        .property-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            font-weight: normal;
+            line-height: 1.15;
+            color: var(--color-primary);
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            margin-bottom: 0.5em;
+        }
+        
+        .property-description {
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            line-height: 1.7;
+            color: var(--color-text-light);
+        }
+        
+        .feature {
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+            font-weight: 500;
+            letter-spacing: 0.01em;
+        }
+        
+        /* About Section Typography */
+        .about-text h3 {
+            font-family: var(--font-display);
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            font-weight: normal;
+            line-height: 1.15;
+            color: var(--color-primary);
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            margin-bottom: 0.5em;
+        }
+        
+        .about-text p {
+            font-size: clamp(1rem, 2vw, 1.1rem);
+            line-height: 1.8;
+            color: var(--color-text-light);
+        }
+        
+        .experience-badge {
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            font-weight: 600;
+            letter-spacing: 0.01em;
+        }
+        
+        /* Contact Section Typography */
+        .contact-info h3 {
+            font-family: var(--font-display);
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            font-weight: normal;
+            line-height: 1.15;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            margin-bottom: 0.5em;
+        }
+        
+        .contact-info p {
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            line-height: 1.7;
+            color: var(--color-text-light);
+        }
+        
+        .contact-text {
+            font-size: clamp(0.9rem, 1.8vw, 1rem);
+            line-height: 1.6;
+        }
+        
+        /* FAQ Typography */
+        .faq-question {
+            font-size: clamp(1rem, 2.2vw, 1.1rem) !important;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        
+        .faq-answer p {
+            font-size: clamp(0.9rem, 1.8vw, 1rem);
+            line-height: 1.6;
+        }
+        
+        /* Policy Cards Typography */
+        .policy-card h3 {
+            font-family: var(--font-display);
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem) !important;
+            font-weight: normal;
+            line-height: 1.3;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+        
+        .policy-card ul {
+            font-size: clamp(0.85rem, 1.8vw, 0.9rem);
+            line-height: 1.7;
+        }
+        
+        /* Footer Typography */
+        .footer h3 {
+            font-family: var(--font-display);
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            font-weight: normal;
+            line-height: 1.15;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            margin-bottom: 0.5em;
+        }
+        
+        .footer p {
+            font-size: clamp(0.9rem, 1.8vw, 1rem);
+            line-height: 1.6;
+        }
+        
+        /* Reserve Section Typography */
+        .reserve-text h3 {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 3.5vw, 2rem);
+            font-weight: normal;
+            line-height: 1.3;
+            color: var(--color-primary);
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+        
+        .reserve-text p {
+            font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+            line-height: 1.7;
+        }
+        
+        .option-header h4 {
+            font-family: var(--font-display);
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            font-weight: normal;
+            line-height: 1.3;
+            color: var(--color-primary);
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+        
+        /* Responsive Typography Adjustments */
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+            
+            .hero h1 {
+                font-size: clamp(1.8rem, 8vw, 2.2rem);
+                line-height: 1.2;
+            }
+            
+            .hero p {
+                font-size: clamp(0.9rem, 3vw, 1rem);
+                line-height: 1.5;
+            }
+            
+            .section-title {
+                font-size: clamp(1.6rem, 6vw, 2rem);
+                line-height: 1.3;
+            }
+            
+            .property-title {
+                font-size: clamp(1.3rem, 4vw, 1.5rem);
+                line-height: 1.4;
+            }
+            
+            .property-description {
+                font-size: clamp(0.9rem, 2.5vw, 0.95rem);
+                line-height: 1.6;
+            }
+            
+            .about-text h3 {
+                font-size: clamp(1.4rem, 5vw, 1.6rem);
+                line-height: 1.4;
+            }
+            
+            .about-text p {
+                font-size: clamp(0.9rem, 2.5vw, 1rem);
+                line-height: 1.7;
+            }
+            
+            .contact-info h3 {
+                font-size: clamp(1.3rem, 4vw, 1.5rem);
+                line-height: 1.4;
+            }
+            
+            .contact-info p {
+                font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+                line-height: 1.6;
+            }
+            
+            .faq-question {
+                font-size: clamp(0.9rem, 3vw, 1rem) !important;
+                line-height: 1.4;
+            }
+            
+            .policy-card h3 {
+                font-size: clamp(1rem, 3vw, 1.1rem) !important;
+                line-height: 1.4;
+            }
+            
+            .policy-card ul {
+                font-size: clamp(0.8rem, 2.2vw, 0.9rem);
+                line-height: 1.6;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+            
+            .hero h1 {
+                font-size: clamp(1.6rem, 10vw, 1.8rem);
+                line-height: 1.3;
+            }
+            
+            .hero p {
+                font-size: clamp(0.85rem, 3.5vw, 0.9rem);
+                line-height: 1.5;
+            }
+            
+            .section-title {
+                font-size: clamp(1.4rem, 7vw, 1.8rem);
+                line-height: 1.4;
+            }
+            
+            .property-title {
+                font-size: clamp(1.2rem, 5vw, 1.3rem);
+                line-height: 1.5;
+            }
+            
+            .property-description {
+                font-size: clamp(0.85rem, 3vw, 0.9rem);
+                line-height: 1.6;
+            }
+            
+            .about-text h3 {
+                font-size: clamp(1.2rem, 6vw, 1.4rem);
+                line-height: 1.5;
+            }
+            
+            .about-text p {
+                font-size: clamp(0.85rem, 3vw, 0.9rem);
+                line-height: 1.7;
+            }
+            
+            .contact-info h3 {
+                font-size: clamp(1.1rem, 5vw, 1.3rem);
+                line-height: 1.5;
+            }
+            
+            .contact-info p {
+                font-size: clamp(0.8rem, 2.8vw, 0.85rem);
+                line-height: 1.6;
+            }
+            
+            .faq-question {
+                font-size: clamp(0.85rem, 3.5vw, 0.9rem) !important;
+                line-height: 1.4;
+            }
+            
+            .policy-card h3 {
+                font-size: clamp(0.95rem, 3.5vw, 1rem) !important;
+                line-height: 1.4;
+            }
+            
+            .policy-card ul {
+                font-size: clamp(0.75rem, 2.8vw, 0.8rem);
+                line-height: 1.6;
+            }
+            
+            .logo {
+                font-size: clamp(1.2rem, 4vw, 1.4rem);
+            }
+            
+            .nav-menu a {
+                font-size: clamp(0.8rem, 2.5vw, 0.875rem);
+            }
+        }
+        
+        /* Enhanced readability for better contrast */
+        .hero h1, .hero p, .hero strong {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        /* Improved spacing for better readability */
+        .hero-content {
+            max-width: 900px;
+            padding: 0 2rem;
+        }
+        
+        .hero h1 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero p {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Better button typography */
+        .cta-button, .selection-btn, .whatsapp-btn, .platform-btn {
+            text-transform: none;
+            letter-spacing: 0.01em;
+        }
+        
+        /* Enhanced focus states for accessibility */
+        .nav-menu a:focus,
+        .cta-button:focus,
+        .selection-btn:focus,
+        .whatsapp-btn:focus,
+        .platform-btn:focus {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+        }
+        
+        /* Smooth transitions for all typography changes */
+        * {
+            transition: font-size 0.3s ease, line-height 0.3s ease;
+        }
+        
+
+        .header {
+            background: #aebc99;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(174, 188, 153, 0.3);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .header:hover {
+            box-shadow: 0 4px 15px rgba(174, 188, 153, 0.4);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        .logo {
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .logo:hover {
+            color: #f5f5dc;
+            text-shadow: 0 0 10px rgba(245, 245, 220, 0.3);
+            transform: scale(1.05);
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .nav-menu a:hover {
+            color: #f5f5dc;
+            transform: translateY(-2px);
+            text-shadow: 0 2px 4px rgba(245, 245, 220, 0.3);
+        }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .hero {
+            background: #aebc99;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #f5f5dc;
+            color: #6B7C3B;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(245, 245, 220, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(245, 245, 220, 0.4);
+            background: white;
+        }
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        .location-selection {
+            padding: 3rem 0 1rem 0;
+            background: white;
+        }
+        .selection-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .selection-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .selection-btn {
+            background: #aebc99;
+            color: white;
+            border: none;
+            padding: 1.2rem 2.5rem;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 160px;
+        }
+        .selection-btn.active {
+            background: #8d9a6e;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+        
+        /* Estilos para las secciones */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+
+        
+        .about {
+            padding: 5rem 0;
+            background: white;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+
+        
+        .experience-badge {
+            display: inline-block;
+            background: #aebc99;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            margin-top: 1rem;
+        }
+        
+        .properties {
+            padding: 5rem 0;
+            background: #f8fafc;
+        }
+        
+        .property-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .property-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .property-info {
+            padding: 2rem;
+        }
+        
+
+        
+        .property-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .feature {
+            background: #aebc99;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+        }
+        
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: #aebc99;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .contact-text {
+            color: #2c3e50;
+        }
+        
+        /* Animaciones */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .shimmer {
+            animation: shimmer 2s infinite;
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes shimmer {
+            0% { text-shadow: 0 0 5px rgba(255,255,255,0.5); }
+            50% { text-shadow: 0 0 20px rgba(255,255,255,0.8); }
+            100% { text-shadow: 0 0 5px rgba(255,255,255,0.5); }
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                padding: 1rem 0;
+                gap: 0;
+                box-shadow: 0 4px 15px rgba(174, 188, 153, 0.1);
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .nav-menu li {
+                width: 100%;
+                text-align: center;
+                padding: 0.8rem 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+
+            
+            .selection-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .selection-btn {
+                width: 100%;
+                max-width: 300px;
+                padding: 1rem 2rem;
+            }
+            
+
+            
+            .faq-question {
+                padding: 1.2rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+        }
+        
+        /* Estilos para el modal de fotos */
+        .photo-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .modal-content {
+            position: relative;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100vw;
+            max-width: 100vw;
+            max-height: 100vh;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .close-modal {
+            position: absolute;
+            top: 18px;
+            right: 24px;
+            color: #fff;
+            font-size: 2.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 2001;
+            background: rgba(0,0,0,0.4);
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+        }
+        .close-modal:hover {
+            background: rgba(255,255,255,0.15);
+            color: #aebc99;
+            transform: scale(1.08);
+        }
+        .modal-image-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            max-width: 95vw;
+            max-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #modalImage {
+            max-width: 95vw;
+            max-height: 75vh;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: #222;
+            transition: transform 0.3s;
+        }
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.18);
+            color: #fff;
+            border: none;
+            padding: 14px 18px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background 0.2s, transform 0.2s;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .modal-nav:hover {
+            background: rgba(255,255,255,0.32);
+            color: #aebc99;
+            transform: translateY(-50%) scale(1.12);
+        }
+        .prev-btn {
+            left: 18px;
+        }
+        .next-btn {
+            right: 18px;
+        }
+        .modal-caption {
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            text-align: center;
+            background: rgba(0,0,0,0.7);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 500;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+        #modalCaption {
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        #modalCounter {
+            opacity: 0.85;
+        }
+        .gallery-grid img {
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 8px;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.04);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+        }
+        .gallery-grid img:active {
+            transform: scale(0.98);
+        }
+        @media (max-width: 900px) {
+            .modal-content {
+                max-width: 100vw;
+                max-height: 100vh;
+                padding: 0;
+            }
+            .modal-image-container {
+                max-width: 100vw;
+                max-height: 60vh;
+            }
+            #modalImage {
+                max-width: 98vw;
+                max-height: 55vh;
+            }
+        }
+        @media (max-width: 600px) {
+            .modal-content {
+                padding: 0;
+            }
+            .close-modal {
+                top: 8px;
+                right: 8px;
+                font-size: 1.5rem;
+                width: 36px;
+                height: 36px;
+            }
+            .modal-nav {
+                padding: 10px 12px;
+                font-size: 1.1rem;
+            }
+            .prev-btn {
+                left: 6px;
+            }
+            .next-btn {
+                right: 6px;
+            }
+            .modal-image-container {
+                max-width: 100vw;
+                max-height: 40vh;
+            }
+            #modalImage {
+                max-width: 99vw;
+                max-height: 38vh;
+                border-radius: 7px;
+            }
+            .modal-caption {
+                bottom: 8px;
+                padding: 6px 10px;
+                font-size: 0.85rem;
+                border-radius: 12px;
+            }
+        }
+        @media (hover: none) and (pointer: coarse) {
+            .modal-nav, .close-modal {
+                min-width: 44px;
+                min-height: 44px;
+                touch-action: manipulation;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important;
+                gap: 10px !important;
+            }
+            
+            .reserve-options {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            .reserve-option {
+                padding: 1.5rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .reserve-options {
+                gap: 1rem !important;
+            }
+            
+            .reserve-option {
+                padding: 1.2rem !important;
+            }
+            
+            .policies .container > div {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            .policy-card {
+                padding: 1.5rem !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .policies .container > div {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+                gap: 1.5rem !important;
+            }
+        }
+
+        .reserve-direct-block {
+            background: #f8f9fa;
+            border-radius: 15px;
+            box-shadow: 0 4px 16px rgba(174, 188, 153, 0.10);
+            padding: 2rem 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+        .whatsapp-btn:hover {
+            background: #1ebe5d;
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.18);
+        }
+        .platforms-row {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .platform-btn {
+            flex: 1 1 150px;
+            min-width: 140px;
+            padding: 0.8rem 1.2rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+        .platform-btn.airbnb {
+            background: #FF5A5F;
+            color: white;
+        }
+        .platform-btn.airbnb:hover {
+            background: #e14c50;
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 4px 16px rgba(255, 90, 95, 0.18);
+        }
+        .platform-btn.booking {
+            background: #003580;
+            color: white;
+        }
+        .platform-btn.booking:hover {
+            background: #00224f;
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 4px 16px rgba(0, 53, 128, 0.18);
+        }
+        @media (max-width: 768px) {
+            .whatsapp-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+            .platform-btn {
+                padding: 0.7rem 1rem;
+                font-size: 0.95rem;
+                min-width: 120px;
+            }
+            .platforms-row {
+                flex-direction: column;
+                gap: 0.7rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .whatsapp-btn {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.9rem;
+                margin-bottom: 0.8rem;
+            }
+            .platform-btn {
+                padding: 0.6rem 0.8rem;
+                font-size: 0.85rem;
+                min-width: 100px;
+            }
+            .reserve-direct-block {
+                padding: 1.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo" style="display: flex; align-items: center; gap: 0.6rem;">
+              <span style="display: flex; align-items: center;">
+                <img src="fotos/logo.jpg" alt="Logo tuhospedajeve" style="height: 40px; width: auto; border-radius: 8px; background: #eaeaea; padding: 2px;">
+              </span>
+              tuhospedajeve
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#propiedades">Propiedades</a></li>
+                <li><a href="#plataformas">Reservar</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#politicas">Políticas y Términos</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content fade-in-up">
+            <h1 class="shimmer">TU HOSPEDAJE SEGURO Y CONFIABLE</h1>
+            <p class="floating">Alquila con nosotros y disfruta de la tranquilidad que solo la experiencia puede brindar</p>
+            <p class="hero-subtitle">Más de <strong class="pulse">2 años</strong> alquilando apartamentos en Venezuela con <strong>garantía de seguridad</strong> y <strong>atención personalizada</strong></p>
+            <p class="hero-benefits">✓ Reservas seguras ✓ Atención 24/7 ✓ Propiedades verificadas ✓ Precios sin comisiones</p>
+        </div>
+    </section>
+
+    <!-- Location Selection Section -->
+    <section class="location-selection">
+        <div class="selection-container">
+            <h2 class="selection-title">¿Dónde deseas alquilar?</h2>
+            <div class="selection-buttons">
+                <button class="selection-btn" onclick="showContent('playa', event)"><i class="fas fa-umbrella-beach" style="margin-right: 0.5rem;"></i> Playa</button>
+                <button class="selection-btn" onclick="showContent('ciudad', event)"><i class="fas fa-city" style="margin-right: 0.5rem;"></i> Ciudad</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Playa/Ciudad Content Section (dinámico) -->
+    <div id="dynamic-content" class="content-section">
+        <!-- Aquí se inyectará el contenido -->
+    </div>
+
+    <!-- Modal para el carrusel de fotos -->
+    <div id="photoModal" class="photo-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <button class="modal-nav prev-btn">&lt;</button>
+            <button class="modal-nav next-btn">&gt;</button>
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="Foto ampliada">
+            </div>
+            <div class="modal-caption">
+                <span id="modalCaption"></span>
+                <span id="modalCounter"></span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+    // Contenido de "Sobre Nosotros" que se mostrará cuando se seleccione una ubicación
+    const aboutContent = `
+    <!-- About Section -->
+    <section id="sobre-mi" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>tuhospedajeve</h3>
+                    <p>Somos un equipo dedicados a ofrecer hospedajes en playa y ciudad, en Tucacas y Valencia, con experiencia y atención profesional.</p>
+                    <p>Nuestro compromiso es brindar un servicio de calidad, asegurando que cada visitante se sienta como en casa en nuestros apartamentos, ubicados estratégicamente en estas hermosas ciudades costeras.</p>
+                    <div class="experience-badge pulse">
+                        <i class="fas fa-star"></i> 2 años de experiencia
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    `;
+
+    // Guarda el contenido original (Playa)
+    const playaContent = `
+    <!-- Property Section -->
+    <section id="propiedades" class="properties">
+        <div class="container">
+            <h2 class="section-title">Mi Apartamento</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="property-card fade-in-up" style="margin: 0;">
+                    <div class="property-gallery" style="background: #f1f5f9; border-radius: 12px; padding: 16px; border: 2px solid #e0e7ef; margin-bottom: 1.5rem;">
+                        <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;">
+                            <img src="fotos/foto1playa.jpg" alt="Apartamento Playa 1" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto2playa.jpg" alt="Apartamento Playa 2" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto3playa.jpg" alt="Apartamento Playa 3" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto4playa.jpg" alt="Apartamento Playa 4" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto5playa.jpg" alt="Apartamento Playa 5" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto6playa.jpg" alt="Apartamento Playa 6" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto7playa.jpg" alt="Apartamento Playa 7" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto8playa.jpg" alt="Apartamento Playa 8" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto9playa.jpg" alt="Apartamento Playa 9" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto10playa.jpg" alt="Apartamento Playa 10" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto11playa.jpg" alt="Apartamento Playa 11" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);"
+                            <img src="fotos/foto11playa.jpg" alt="Apartamento Playa 12" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto12playa.jpg" alt="Apartamento Playa 13" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto13playa.jpg" alt="Apartamento Playa 14" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto14playa.jpg" alt="Apartamento Playa 15" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto15playa.jpg" alt="Apartamento Playa 16" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto16playa.jpg" alt="Apartamento Playa 17" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto18playa.jpg" alt="Apartamento Playa 18" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                         </div>
+                    </div>
+                    <div class="property-info">
+                        <h3 class="property-title">Apartamento en Tucacas</h3>
+                        <p class="property-description">Mi apartamento personal, ubicado estratégicamente a solo 5 minutos de la playa de Tucacas. Perfecto para familias, parejas o grupos pequeños que buscan una experiencia auténtica y cómoda en esta hermosa ciudad costera.</p>
+                        <div class="property-features">
+                            <span class="feature">2 Habitaciones</span>
+                            <span class="feature">2 Baños</span>
+                            <span class="feature">Cocina Equipada</span>
+                            <span class="feature">WiFi Gratis</span>
+                            <span class="feature">Aire Acondicionado</span>
+                            <span class="feature">Estacionamiento</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reserve Section -->
+    <section id="plataformas" class="reserve" style="padding: 5rem 0; background: white;">
+        <div class="container">
+            <h2 class="section-title">Reservar</h2>
+            <div class="reserve-content">
+                <div class="reserve-text" style="text-align: center; margin-bottom: 3rem;">
+                    <h3 style="font-size: 2rem; color: #6B7C3B; margin-bottom: 1rem;">Reserva tu estadía</h3>
+                    <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">Elige la opción que prefieras para reservar mi apartamento. Reserva directa sin comisiones o a través de plataformas.</p>
+                </div>
+                <div class="reserve-options" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                    <div class="reserve-option" style="background: white; color: #2c3e50; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(107, 124, 59, 0.1); border: 2px solid #6B7C3B;">
+                        <div class="option-header" style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <i class="fas fa-star" style="color: #6B7C3B; font-size: 1.5rem; margin-right: 0.5rem;"></i>
+                            <h4 style="font-size: 1.3rem; font-weight: 600; color: #6B7C3B;">Reserva Directa</h4>
+                        </div>
+                        <p style="margin-bottom: 1.5rem; color: #666;">Reserva directamente conmigo y evita comisiones de plataformas. Obtén mejores precios y atención personalizada.</p>
+                        <div class="reserve-direct-block">
+                            <a href="https://wa.me/584144413318" target="_blank" class="whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i> Reservar por WhatsApp
+                            </a>
+                            <div class="platforms-row">
+                                <a href="https://airbnb.co.ve/h/alquilatuaptoentucacas" target="_blank" class="platform-btn airbnb">
+                                    <i class="fab fa-airbnb"></i> Airbnb
+                                </a>
+                                <a href="https://www.booking.com/Pulse-QUuxB2" target="_blank" class="platform-btn booking">
+                                    <i class="fas fa-calendar-check"></i> Booking
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" style="padding: 5rem 0; background: #f8fafc;">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; background: none; border: none; text-align: left; font-size: 1.1rem; font-weight: 600; color: #2c3e50; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <span>¿Cuál es el horario de check-in y check-out?</span>
+                        <i class="fas fa-chevron-down" style="transition: transform 0.3s ease;"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; color: #666;">
+                        <p>Check-in: 3:00 PM | Check-out: 11:00 AM. Para horarios especiales, contáctanos con anticipación.</p>
+                    </div>
+                </div>
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; background: none; border: none; text-align: left; font-size: 1.1rem; font-weight: 600; color: #2c3e50; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <span>¿Qué incluye el alquiler?</span>
+                        <i class="fas fa-chevron-down" style="transition: transform 0.3s ease;"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; color: #666;">
+                        <p>Todas nuestras propiedades incluyen: WiFi, agua caliente, cocina equipada, ropa de cama, toallas y limpieza inicial.</p>
+                    </div>
+                </div>
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; background: none; border: none; text-align: left; font-size: 1.1rem; font-weight: 600; color: #2c3e50; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <span>¿Aceptan mascotas?</span>
+                        <i class="fas fa-chevron-down" style="transition: transform 0.3s ease;"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; color: #666;">
+                        <p>No en nuestro Apartamento no aceptamos las mascotas, Espero que comprendan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact" style="padding: 5rem 0; background: white;">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <p>Contáctame directamente para cualquier consulta sobre mi apartamento.</p>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Teléfono:</strong><br>
+                            +58 414-441-3318
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Email:</strong><br>
+                            juanjrodriguezh@gmail.com
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Ubicación:</strong><br>
+                            Tucacas, Estado Falcón, Venezuela
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Policies Section -->
+    <section class="policies" id="politicas" style="padding: 5rem 0; background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Políticas y Términos</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="policy-card" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 1.3rem; font-weight: 600; color: #2c3e50; margin-bottom: 1rem;">
+                        <i class="fas fa-calendar-alt" style="color: #6B7C3B; margin-right: 0.5rem;"></i>
+                        Política de Cancelación
+                    </h3>
+                    <ul style="color: #666; line-height: 1.8;">
+                        <li>• Cancelación gratuita hasta 7 días antes</li>
+                        <li>• 50% de reembolso hasta 3 días antes</li>
+                        <li>• Sin reembolso en las últimas 72 horas</li>
+                        <li>• Flexibilidad en casos especiales</li>
+                    </ul>
+                </div>
+                <div class="policy-card" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 1.3rem; font-weight: 600; color: #2c3e50; margin-bottom: 1rem;">
+                        <i class="fas fa-users" style="color: #6B7C3B; margin-right: 0.5rem;"></i>
+                        Política de Huéspedes
+                    </h3>
+                    <ul style="color: #666; line-height: 1.8;">
+                        <li>• Máximo 8 personas en el apartamento</li>
+                        <li>• Respeto al vecindario</li>
+                        <li>• No se permiten mascotas</li>
+                    </ul>
+                </div>
+                <div class="policy-card" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 1.3rem; font-weight: 600; color: #2c3e50; margin-bottom: 1rem;">
+                        <i class="fas fa-shield-alt" style="color: #6B7C3B; margin-right: 0.5rem;"></i>
+                        Seguridad y Limpieza
+                    </h3>
+                    <ul style="color: #666; line-height: 1.8;">
+                        <li>• Protocolos de limpieza</li>
+                        <li>• Al alquilar el apartamento se aplicara un cobro de 20$ por limpieza y desinfección</li>
+                        <li>• Deposito: Al alquilar el apartamento se aplicara un cobro de 50$ Para cubrir cualquier daño a la propiedad se pide un depósito que debe ser pagado en el momento de recibir el apartamento. Se paga en pagomovil, no se acepta efectivo. Se le retornará al finalizar en caso de entregar el apartamento en las mismas condiciones que se recibió. Se devuelve el mismo pago a la misma tasa que se recibió. En caso de que usted entregue depósito en efectivo al personal, usted lo hace bajo su propio riesgo y no nos hacemos responsables. </li>
+                        <li>• Al alquilar el apartamento se debe pagar un Brazalete con un costo de 10$ por personas, Son politicas de condominio</li>
+                        <li>• Atención 24/7 en emergencias</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="background: #aebc99; color: white; padding: 3rem 0 1rem 0;">
+        <div class="container">
+            <div class="footer-content" style="text-align: center;">
+                <h3>tuhospedajeve</h3>
+                <p>2 años de experiencia alquilando mi apartamento en Tucacas</p>
+                <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; margin-top: 2rem;">
+                    <p>&copy; 2024 tuhospedajeve. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    `;
+
+    const ciudadContent = `
+    <!-- Property Section -->
+    <section id="propiedades" class="properties">
+        <div class="container">
+            <h2 class="section-title">Apartamentos en Ciudad</h2>
+            <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 3rem;">
+                <!-- Isla Larga -->
+                <div class="property-card fade-in-up" style="margin: 0;">
+                    <div class="property-gallery" style="background: #f1f5f9; border-radius: 12px; padding: 16px; border: 2px solid #e0e7ef; margin-bottom: 1.5rem;">
+                        <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;">
+                            <img src="fotos/foto1ciudad.jpg" alt="Apartamento Ciudad 1 - Foto 1" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto2ciudad.jpg" alt="Apartamento Ciudad 1 - Foto 2" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto3ciudad.jpg" alt="Apartamento Ciudad 1 - Foto 3" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto4ciudad.jpg" alt="Apartamento Ciudad 1 - Foto 4" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto5ciudad.jpg" alt="Apartamento Ciudad 1 - Foto 5" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto6ciudad.jpg" alt="Apartamento Ciudad 1 - Foto 6" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto7ciudad.jpg" alt="Apartamento Ciudad 1 - Foto 7" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto8ciudad.jpg" alt="Apartamento Ciudad 1 - Foto 8" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto9ciudad.jpg" alt="Apartamento Ciudad 1 - Foto 9" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        </div>
+                    </div>
+                    <div class="property-info">
+                        <h3 class="property-title">Isla Larga</h3>
+                        <p class="property-description">Mi apartamento en la ciudad, ubicado en una zona céntrica y accesible. Perfecto para viajeros de negocios, familias o grupos que buscan comodidad y conveniencia en el corazón de la ciudad.</p>
+                        <div class="property-features">
+                            <span class="feature">1 Habitaciones</span>
+                            <span class="feature">1 Baños</span>
+                            <span class="feature">De 1-2 Personas</span>
+                            <span class="feature">Cocina Equipada</span>
+                            <span class="feature">WiFi Gratis</span>
+                            <span class="feature">Aire Acondicionado</span>
+                            <span class="feature">Estacionamiento</span>
+                            <span class="feature">Ubicación la trigaleña</span>
+                            <span class="feature">Pozo de Agua</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Barcerlona suite-->
+                <div class="property-card fade-in-up" style="margin: 0;">
+                    <div class="property-gallery" style="background: #f1f5f9; border-radius: 12px; padding: 16px; border: 2px solid #e0e7ef; margin-bottom: 1.5rem;">
+                        <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;">
+                            <img src="fotos/foto1ciudad2.jpg" alt="Apartamento Ciudad 2 - Foto 1" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto2ciudad2.jpg" alt="Apartamento Ciudad 2 - Foto 2" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto3ciudad2.jpg" alt="Apartamento Ciudad 2 - Foto 3" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto4ciudad2.jpg" alt="Apartamento Ciudad 2 - Foto 4" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto5ciudad2.jpg" alt="Apartamento Ciudad 2 - Foto 5" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto6ciudad2.jpg" alt="Apartamento Ciudad 2 - Foto 6" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto7ciudad2.jpg" alt="Apartamento Ciudad 2 - Foto 7" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto8ciudad2.jpg" alt="Apartamento Ciudad 2 - Foto 8" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto9ciudad2.jpg" alt="Apartamento Ciudad 2 - Foto 9" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto10ciudad2.jpg" alt="Apartamento Ciudad 2 - Foto 10" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto11ciudad2.jpg" alt="Apartamento Ciudad 2 - Foto 11" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto12ciudad2.jpg" alt="Apartamento Ciudad 2 - Foto 12" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto13ciudad2.jpg" alt="Apartamento Ciudad 2 - Foto 13" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto14ciudad2.jpg" alt="Apartamento Ciudad 2 - Foto 14" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        </div>
+                    </div>
+                    <div class="property-info">
+                        <h3 class="property-title">Barcelona Suite</h3>
+                        <p class="property-description">Mi apartamento en la ciudad, ubicado en una zona céntrica y accesible. Perfecto para viajeros de negocios, familias o grupos que buscan comodidad y conveniencia en el corazón de la ciudad.</p>
+                        <div class="property-features">
+                            <span class="feature">1 Habitaciones</span>
+                            <span class="feature">1 Sofa cama</span>
+                             <span class="feature">De 1-3 Personas</span>
+                            <span class="feature">2 Baños</span>
+                            <span class="feature">Cocina Equipada</span>
+                            <span class="feature">WiFi Gratis</span>
+                            <span class="feature">Aire Acondicionado</span>
+                            <span class="feature">Estacionamiento</span>
+                            <span class="feature">Ubicación La Viña</span>
+                            <span class="feature">Piscina</span>
+                        </div>
+                    </div>  <!-- Barcerlona suite-->
+                <div class="property-card fade-in-up" style="margin: 0;">
+                    <div class="property-gallery" style="background: #f1f5f9; border-radius: 12px; padding: 16px; border: 2px solid #e0e7ef; margin-bottom: 1.5rem;">
+                        <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;">
+                            <img src="fotos/foto1ciudad3.jpg" alt="Apartamento Ciudad 3 - Foto 1" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto2ciudad3.jpg" alt="Apartamento Ciudad 3 - Foto 2" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto3ciudad3.jpg" alt="Apartamento Ciudad 3 - Foto 3" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto4ciudad3.jpg" alt="Apartamento Ciudad 3 - Foto 4" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto5ciudad3.jpg" alt="Apartamento Ciudad 3 - Foto 5" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto6ciudad3.jpg" alt="Apartamento Ciudad 3 - Foto 6" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto7ciudad3.jpg" alt="Apartamento Ciudad 3 - Foto 7" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto8ciudad3.jpg" alt="Apartamento Ciudad 3 - Foto 8" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto9ciudad3.jpg" alt="Apartamento Ciudad 3 - Foto 9" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto10ciudad3.jpg" alt="Apartamento Ciudad 3 - Foto 10" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto11ciudad3.jpg" alt="Apartamento Ciudad 3 - Foto 11" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto12ciudad3.jpg" alt="Apartamento Ciudad 3 - Foto 12" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto13ciudad3.jpg" alt="Apartamento Ciudad 3 - Foto 13" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto14ciudad3.jpg" alt="Apartamento Ciudad 3 - Foto 14" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);"> 
+                            </
+                        div>
+                    </div>
+                    <div class="property-info">
+                        <h3 class="property-title">Barcelona Suite</h3>
+                        <p class="property-description">Mi apartamento en la ciudad, ubicado en una zona céntrica y accesible. Perfecto para viajeros de negocios, familias o grupos que buscan comodidad y conveniencia en el corazón de la ciudad.</p>
+                        <div class="property-features">
+                            <span class="feature">1 Habitaciones</span>
+                            <span class="feature">1 Sofa cama</span>
+                             <span class="feature">De 1-3 Personas</span>
+                            <span class="feature">2 Baños</span>
+                            <span class="feature">Cocina Equipada</span>
+                             <span class="feature">1 maletero</span>
+                            <span class="feature">WiFi Gratis</span>
+                            <span class="feature">Aire Acondicionado</span>
+                            <span class="feature">Estacionamiento</span>
+                            <span class="feature">Ubicación La Viña</span>
+                            <span class="feature">Lavadora</span>
+                        </div>
+                </div>
+            </div>
+                <div class="property-gallery" style="background: #f1f5f9; border-radius: 12px; padding: 16px; border: 2px solid #e0e7ef; margin-bottom: 1.5rem;">
+                        <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;">
+                            <img src="fotos/foto1ciudad4.jpg" alt="Apartamento Ciudad 4 - Foto 1" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto2ciudad4.jpg" alt="Apartamento Ciudad 4 - Foto 2" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto3ciudad4.jpg" alt="Apartamento Ciudad 4 - Foto 3" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto4ciudad4.jpg" alt="Apartamento Ciudad 4 - Foto 4" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto5ciudad4.jpg" alt="Apartamento Ciudad 4 - Foto 5" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto6ciudad4.jpg" alt="Apartamento Ciudad 4 - Foto 6" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto7ciudad4.jpg" alt="Apartamento Ciudad 4 - Foto 7" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto8ciudad4.jpg" alt="Apartamento Ciudad 4 - Foto 8" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto9ciudad4.jpg" alt="Apartamento Ciudad 4 - Foto 9" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto10ciudad4.jpg" alt="Apartamento Ciudad 4 - Foto 10" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto11ciudad4.jpg" alt="Apartamento Ciudad 4 - Foto 11" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto12ciudad4.jpg" alt="Apartamento Ciudad 4 - Foto 12" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto13ciudad4.jpg" alt="Apartamento Ciudad 4 - Foto 13" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <img src="fotos/foto14ciudad4.jpg" alt="Apartamento Ciudad 4 - Foto 14" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);"> 
+                            <img src="fotos/foto15ciudad4.jpg" alt="Apartamento Ciudad 4 - Foto 15" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);"> 
+                            <img src="fotos/foto16ciudad4.jpg" alt="Apartamento Ciudad 4 - Foto 16" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);"> 
+                            <img src="fotos/foto17ciudad4.jpg" alt="Apartamento Ciudad 4 - Foto 17" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);"> 
+                            </
+                        div>
+                    </div>
+                    <div class="property-info">
+                        <h3 class="property-title">No se sabe todavia porque Rodrigo no dijo jaja</h3>
+                        <p class="property-description">Mi apartamento grande en la ciudad, ubicado en una zona céntrica y accesible. Perfecto para viajeros de negocios, familias o grupos que buscan comodidad y conveniencia en el corazón de la ciudad.</p>
+                        <div class="property-features">
+                            <span class="feature">2 Habitaciones</span>
+                             <span class="feature">De 1-6 Personas</span>
+                            <span class="feature">1 Sofa cama pequeño(Dentro de la habitacion principal)</span>
+                            <span class="feature">2 Baños</span>
+                            <span class="feature">Cocina Equipada</span>
+                            <span class="feature">WiFi Gratis</span>
+                            <span class="feature">Aire Acondicionado</span>
+                            <span class="feature">Estacionamiento</span>
+                            <span class="feature">Ubicación Campo Alegre/span>
+                            <span class="feature">Lavadora</span>
+                            
+                        </div>
+        </div>
+    </section>
+
+    <!-- Reserve Section -->
+    <section id="plataformas" class="reserve" style="padding: 5rem 0; background: white;">
+        <div class="container">
+            <h2 class="section-title">Reservar</h2>
+            <div class="reserve-content">
+                <div class="reserve-text" style="text-align: center; margin-bottom: 3rem;">
+                    <h3 style="font-size: 2rem; color: #6B7C3B; margin-bottom: 1rem;">Reserva tu estadía</h3>
+                    <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">Elige la opción que prefieras para reservar mi apartamento en la ciudad. Reserva directa sin comisiones o a través de plataformas.</p>
+                </div>
+                <div class="reserve-options" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                    <div class="reserve-option" style="background: white; color: #2c3e50; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(107, 124, 59, 0.1); border: 2px solid #6B7C3B;">
+                        <div class="option-header" style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <i class="fas fa-star" style="color: #6B7C3B; font-size: 1.5rem; margin-right: 0.5rem;"></i>
+                            <h4 style="font-size: 1.3rem; font-weight: 600; color: #6B7C3B;">Reserva Directa</h4>
+                        </div>
+                        <p style="margin-bottom: 1.5rem; color: #666;">Reserva directamente conmigo y evita comisiones de plataformas. Obtén mejores precios y atención personalizada.</p>
+                        <div class="reserve-direct-block">
+                            <a href="https://wa.me/584124499718" target="_blank" class="whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i> Reservar por WhatsApp
+                            </a>
+                            <div class="platforms-row">
+                                <a href="https://www.airbnb.com/l/HtWun7IL" target="_blank" class="platform-btn airbnb">
+                                    <i class="fab fa-airbnb"></i> Airbnb
+                                </a>
+                                <a href="https://www.booking.com/Pulse-9Y1OvL" target="_blank" class="platform-btn booking">
+                                    <i class="fas fa-calendar-check"></i> Booking
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" style="padding: 5rem 0; background: #f8fafc;">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; background: none; border: none; text-align: left; font-size: 1.1rem; font-weight: 600; color: #2c3e50; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <span>¿Cuál es el horario de check-in y check-out?</span>
+                        <i class="fas fa-chevron-down" style="transition: transform 0.3s ease;"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; color: #666;">
+                        <p>Check-in: 3:00 PM | Check-out: 11:00 AM. Para horarios especiales, contáctanos con anticipación.</p>
+                    </div>
+                </div>
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; background: none; border: none; text-align: left; font-size: 1.1rem; font-weight: 600; color: #2c3e50; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <span>¿Qué incluye el alquiler?</span>
+                        <i class="fas fa-chevron-down" style="transition: transform 0.3s ease;"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; color: #666;">
+                        <p>Todas nuestras propiedades incluyen: WiFi, agua caliente, cocina equipada, ropa de cama, toallas y limpieza inicial.</p>
+                    </div>
+                </div>
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; background: none; border: none; text-align: left; font-size: 1.1rem; font-weight: 600; color: #2c3e50; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <span>¿Aceptan mascotas?</span>
+                        <i class="fas fa-chevron-down" style="transition: transform 0.3s ease;"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; color: #666;">
+                        <p>No en nuestro Apartamento no aceptamos las mascotas, Espero que comprendan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact" style="padding: 5rem 0; background: white;">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <p>Contáctame directamente para cualquier consulta sobre mi apartamento.</p>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Teléfono:</strong><br>
+                            +58 412499718
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            Email:<br>
+                            iamrod26@gmail.com
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt" style="color: #fff; margin-right: 0.5rem;"></i>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Ubicación:</strong><br>
+                            Valencia, Estado Carabobo, Venezuela
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Policies Section -->
+    <section class="policies" id="politicas" style="padding: 5rem 0; background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Políticas y Términos</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="policy-card" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 1.3rem; font-weight: 600; color: #2c3e50; margin-bottom: 1rem;">
+                        <i class="fas fa-calendar-alt" style="color: #6B7C3B; margin-right: 0.5rem;"></i>
+                        Política de Cancelación
+                    </h3>
+                    <ul style="color: #666; line-height: 1.8;">
+                        <li>• Cancelación gratuita hasta 7 días antes</li>
+                        <li>• 50% de reembolso hasta 3 días antes</li>
+                        <li>• Sin reembolso en las últimas 72 horas</li>
+                        <li>• Flexibilidad en casos especiales</li>
+                    </ul>
+                </div>
+                <div class="policy-card" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 1.3rem; font-weight: 600; color: #2c3e50; margin-bottom: 1rem;">
+                        <i class="fas fa-users" style="color: #6B7C3B; margin-right: 0.5rem;"></i>
+                        Política de Huéspedes
+                    </h3>
+                    <ul style="color: #666; line-height: 1.8;">
+                        <li>• Máximo 3 personas en el apartamento</li>
+                        <li>• Respeto al vecindario</li>
+                        <li>• No se permiten mascotas</li>
+                    </ul>
+                </div>
+                <div class="policy-card" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 1.3rem; font-weight: 600; color: #2c3e50; margin-bottom: 1rem;">
+                        <i class="fas fa-shield-alt" style="color: #6B7C3B; margin-right: 0.5rem;"></i>
+                        Seguridad y Limpieza
+                    </h3>
+                    <ul style="color: #666; line-height: 1.8;">
+                        <li>• Protocolos de limpieza</li>
+                        <li>• Al alquilar el apartamento se aplicara un cobro de 15$ por limpieza y desinfección</li>
+                        <li>• Deposito: "Al alquilar el apartamento se aplicara un cobro de 100$ por deposito de seguridad",Para cubrir cualquier daño a la propiedad se pide un depósito que debe ser pagado en el momento de recibir el apartamento. Se paga en pagomovil, no se acepta efectivo. Se le retornará al finalizar en caso de entregar el apartamento en las mismas condiciones que se recibió. Se devuelve el mismo pago a la misma tasa que se recibió. En caso de que usted entregue depósito en efectivo al personal, usted lo hace bajo su propio riesgo y no nos hacemos responsables.</li>
+                        <li>• Atención 24/7 en emergencias</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="background: #aebc99; color: white; padding: 3rem 0 1rem 0;">
+        <div class="container">
+            <div class="footer-content" style="text-align: center;">
+                <h3>tuhospedajeve</h3>
+                <p>2 años de experiencia alquilando mi apartamento en la ciudad</p>
+                <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; margin-top: 2rem;">
+                    <p>&copy; 2024 tuhospedajeve. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    `;
+
+    // Contenido inicial (solo selección, sin sobre mí)
+    const initialContent = ``;
+
+    function showContent(type, event) {
+        document.querySelectorAll('.selection-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+        const contentDiv = document.getElementById('dynamic-content');
+        contentDiv.classList.add('active');
+        if(type === 'playa') {
+            contentDiv.innerHTML = aboutContent + playaContent;
+        } else {
+            contentDiv.innerHTML = aboutContent + ciudadContent;
+        }
+        // Hacer scroll suave al contenido dinámico
+        setTimeout(() => {
+            contentDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+    }
+    
+    // No mostrar nada por defecto
+    window.addEventListener('DOMContentLoaded', function() {
+        // El div dynamic-content permanece vacío y oculto hasta que se seleccione una opción
+        
+        // Funcionalidad para el menú móvil
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Funcionalidad para las FAQ
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('faq-question')) {
+                const faqItem = e.target.closest('.faq-item');
+                const answer = faqItem.querySelector('.faq-answer');
+                const icon = e.target.querySelector('i');
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    answer.style.display = 'block';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            }
+        });
+        
+        // Cerrar menú móvil al hacer clic en un enlace
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Funcionalidad para el carrusel de fotos mejorada para móviles
+        let currentPhotos = [];
+        let currentPhotoIndex = 0;
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        // Función para abrir el modal
+        function openPhotoModal(photos, startIndex) {
+            currentPhotos = photos;
+            currentPhotoIndex = startIndex;
+            updateModalImage();
+            document.getElementById('photoModal').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevenir scroll
+        }
+        
+        // Función para cerrar el modal
+        function closePhotoModal() {
+            document.getElementById('photoModal').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restaurar scroll
+        }
+        
+        // Función para actualizar la imagen del modal
+        function updateModalImage() {
+            const modalImage = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+            const modalCounter = document.getElementById('modalCounter');
+            
+            if (currentPhotos.length > 0) {
+                modalImage.src = currentPhotos[currentPhotoIndex].src;
+                modalCaption.textContent = currentPhotos[currentPhotoIndex].alt;
+                modalCounter.textContent = `${currentPhotoIndex + 1} / ${currentPhotos.length}`;
+            }
+        }
+        
+        // Función para ir a la siguiente foto
+        function nextPhoto() {
+            currentPhotoIndex = (currentPhotoIndex + 1) % currentPhotos.length;
+            updateModalImage();
+        }
+        
+        // Función para ir a la foto anterior
+        function prevPhoto() {
+            currentPhotoIndex = (currentPhotoIndex - 1 + currentPhotos.length) % currentPhotos.length;
+            updateModalImage();
+        }
+        
+        // Event listeners para el modal
+        document.querySelector('.close-modal').addEventListener('click', closePhotoModal);
+        document.querySelector('.next-btn').addEventListener('click', nextPhoto);
+        document.querySelector('.prev-btn').addEventListener('click', prevPhoto);
+        
+        // Cerrar modal al hacer clic fuera de la imagen
+        document.getElementById('photoModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePhotoModal();
+            }
+        });
+        
+        // Soporte para gestos táctiles (swipe) en móviles
+        const modalImage = document.getElementById('modalImage');
+        let touchStartY = 0;
+        let touchEndY = 0;
+        let isHorizontalSwipe = false;
+        let isVerticalSwipe = false;
+
+        // Detectar inicio del toque
+        modalImage.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+            isHorizontalSwipe = false;
+            isVerticalSwipe = false;
+        }, { passive: true });
+
+        // Detectar movimiento del toque
+        modalImage.addEventListener('touchmove', function(e) {
+            const moveX = e.changedTouches[0].screenX - touchStartX;
+            const moveY = e.changedTouches[0].screenY - touchStartY;
+            // Solo bloquear si es swipe horizontal claro (más de 30px y más horizontal que vertical)
+            if (!isHorizontalSwipe && !isVerticalSwipe) {
+                if (Math.abs(moveX) > Math.abs(moveY) && Math.abs(moveX) > 30) {
+                    isHorizontalSwipe = true;
+                    isVerticalSwipe = false;
+                    e.preventDefault(); // Solo prevenir scroll si es swipe horizontal claro
+                } else if (Math.abs(moveY) > Math.abs(moveX) && Math.abs(moveY) > 30) {
+                    isVerticalSwipe = true;
+                    isHorizontalSwipe = false;
+                    // No prevenir scroll, dejar que el navegador maneje el scroll
+                }
+            } else if (isHorizontalSwipe) {
+                e.preventDefault();
+            }
+            // Si es vertical, nunca prevenimos el scroll
+        }, { passive: false });
+
+        // Detectar fin del toque
+        modalImage.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            touchEndY = e.changedTouches[0].screenY;
+            if (isHorizontalSwipe) {
+                handleSwipe();
+            }
+            // Si fue vertical, no hacemos nada (dejamos scrollear)
+        }, { passive: true });
+        
+        // Manejar el gesto de swipe
+        function handleSwipe() {
+            const swipeThreshold = 50; // Sensibilidad del swipe
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swipe hacia la izquierda - siguiente foto
+                    nextPhoto();
+                } else {
+                    // Swipe hacia la derecha - foto anterior
+                    prevPhoto();
+                }
+            }
+        }
+        
+        // Navegación con teclado
+        document.addEventListener('keydown', function(e) {
+            if (document.getElementById('photoModal').style.display === 'block') {
+                if (e.key === 'Escape') {
+                    closePhotoModal();
+                } else if (e.key === 'ArrowRight') {
+                    nextPhoto();
+                } else if (e.key === 'ArrowLeft') {
+                    prevPhoto();
+                }
+            }
+        });
+        
+        // Función para hacer las fotos clickeables
+        function makePhotosClickable() {
+            const galleryImages = document.querySelectorAll('.gallery-grid img');
+            galleryImages.forEach((img, index) => {
+                // Remover event listeners anteriores para evitar duplicados
+                img.removeEventListener('click', img.clickHandler);
+                
+                // Crear nuevo event listener
+                img.clickHandler = function() {
+                    openPhotoModal(Array.from(galleryImages), index);
+                };
+                
+                img.addEventListener('click', img.clickHandler);
+                
+                // Agregar soporte táctil para las imágenes de la galería
+                img.addEventListener('touchstart', function(e) {
+                    e.preventDefault(); // Prevenir zoom en móviles
+                }, { passive: false });
+            });
+        }
+        
+        // Hacer las fotos clickeables cuando se carga el contenido
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.type === 'childList') {
+                    setTimeout(makePhotosClickable, 100);
+                }
+            });
+        });
+        
+        observer.observe(document.getElementById('dynamic-content'), {
+            childList: true,
+            subtree: true
+        });
+    });
+    </script>
+</body>
+</html>
